@@ -1,0 +1,28 @@
+:root {
+    --red: #af0c15;
+    --red-light: #d2292d;
+    --black: #181818;
+    --black-light: #282828;
+    --blue: #0d3580;
+    --blue-light: #1761b0;
+    --white: #fff;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Tahoma, sans-serif;
+    background-color: var(--black);
+    color: var(--white);
+}
+
+.center-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.main-text {
+    font-size: 25vw;
+}
