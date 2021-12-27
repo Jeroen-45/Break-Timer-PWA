@@ -3,7 +3,7 @@ setInterval(updateTimer, 1000);
 document.body.addEventListener('click', processTap, true);
 
 /* Settings / constants */
-const countdownTime = 30 * 60 * 1000;
+const countdownTime = 20 * 60 * 1000;
 const countdownOverdueExtremeTime = 2 * 60 * 1000;
 const breakTime = 20 * 1000;
 
