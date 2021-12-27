@@ -15,7 +15,6 @@ var timerStart = 0; // start of current timer
 
 /* Convert milliseconds to MM:SS string with */
 function msToMMSS(ms) {
-    console.log(ms);
     let s = Math.round(ms / 1000);
     let sAbs = Math.abs(s);
     let minutes = parseInt(sAbs / 60);
