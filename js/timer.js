@@ -34,8 +34,8 @@ function setBgColor(color) {
 }
 
 function processTap() {
-    /* Check if last tap was longer than 10ms ago, to avoid double triggering with click AND touchend */
-    if (lastTap >= Date.now() - 10) {
+    /* Check if last tap was longer than 100ms ago, to avoid double triggering with click AND touchend */
+    if (lastTap >= Date.now() - 100) {
         return;
     }
 
