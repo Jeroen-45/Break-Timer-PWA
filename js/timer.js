@@ -1,6 +1,7 @@
 /* Start timer loop and set event handlers */
 setInterval(updateTimer, 1000);
-document.body.addEventListener('click', processTap, true);
+document.addEventListener("click", processTap, true);
+document.addEventListener("touchend", processTap, false);
 
 /* Settings / constants */
 const countdownTime = 20 * 60 * 1000;
@@ -12,8 +13,9 @@ const timerElement = document.getElementById("timer");
 /* State variables */
 var state = "none";
 var timerStart = 0; // start of current timer
+var lastTap = 0; // Time of last tap
 
-/* Convert milliseconds to MM:SS string with */
+/* Convert milliseconds to MM:SS string with minus sign in front of it if applicable */
 function msToMMSS(ms) {
     let s = Math.round(ms / 1000);
     let sAbs = Math.abs(s);
@@ -28,6 +30,15 @@ function setBgColor(color) {
 }
 
 function processTap() {
+    /* Check if last tap was longer than 10ms ago, to avoid double triggering with click AND touchend */
+    if (lastTap >= Date.now() - 10) {
+        return;
+    }
+
+    /* Set last tap time */
+    lastTap = Date.now();
+
+    /* Take appropriate action based on the current state */
     switch (state) {
         case "breakCountdown":
             setBgColor("blue");
