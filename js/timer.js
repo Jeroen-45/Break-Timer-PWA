@@ -27,6 +27,10 @@ function msToMMSS(ms) {
 /* Set background color of body to the css variable with the given name */
 function setBgColor(color) {
     document.body.style.backgroundColor = "var(--" + color + ")";
+
+    /* Update theme color (tab/top bar color in mobile browsers) */
+    bgColorString = window.getComputedStyle(document.body, null).getPropertyValue('background-color');
+    document.querySelector("meta[name=theme-color]").setAttribute("content", bgColorString);
 }
 
 function processTap() {
