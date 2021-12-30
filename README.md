@@ -1,6 +1,6 @@
 # Break Timer PWA
 A simple progressive web app meant to be ran on an old phone, using it as a permanently on screen.
-This app can be useful as a basic pomodoro timer or a 20/20 rule reminder.
+This app can be useful as a basic pomodoro timer or a 20-20-20-rule reminder.
 
 A live demo can be found at [https://timer.j45.nl](https://timer.j45.nl).
 
